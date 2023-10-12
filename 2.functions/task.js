@@ -69,11 +69,8 @@ function makeWork(arrOfArr, func) {
   let maxWorkerResult = -Infinity;
 
   for (i=0; i < arrOfArr.length; i++){
-
     const result = func(...arrOfArr[i]);
-
-    console.log(arrOfArr[i]);
-    console.log(result);
+    console.log(i, '/', arrOfArr.length, '->', arrOfArr[i], '->', result);
 
     if (result > maxWorkerResult){
        maxWorkerResult = result;
